@@ -10,7 +10,7 @@ server.listen(4000)
 io.on('connect', (socket)=>{
     socket.on('message',(msg)=>{
         if(!msg.includes('undefined: ')){
-            socket.emit('chat',`\n${msg}`)
+            io.emit('chat',`\n${msg}`)
         }
     })
 })
