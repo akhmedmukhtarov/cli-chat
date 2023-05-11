@@ -1,6 +1,6 @@
 const io = require('socket.io-client');
 
-const socket = io('http://localhost:4000');
+const socket = io('http://143.42.17.219:4000');
 
 const username = process.argv.splice(2)[0]?.trim();
 
