@@ -22,3 +22,9 @@ socket.on('chat', (msg) => {
         console.log('---------------' + msg);
     }
 });
+
+
+process.on('SIGINT', ()=>{
+    socket.emit('message', username + ' left chat');
+    process.exit()
+})
